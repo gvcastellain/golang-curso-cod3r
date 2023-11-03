@@ -13,9 +13,9 @@ func numeroAleatorio() int {
 }
 
 func main() {
-	if i := numeroAleatorio(); i > 5 {
-		fmt.Println("i maior que 5", i)
+	if i := numeroAleatorio(); i > 5 { //inicializa a var no if e faz a operação, cria ela local, da pra fazer no switch tbm
+		fmt.Println("i maior que 5, valor:", i)
 	} else {
-		fmt.Println("i menor que 5", i)
+		fmt.Println("i menor que 5, valor:", i)
 	}
 }
