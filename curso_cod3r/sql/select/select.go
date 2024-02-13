@@ -20,11 +20,12 @@ func main() {
 	}
 	defer db.Close()
 
-	stmt, _ := db.Query("select id, nome from usuarios where id > ?", 0)
+	stmt, _ := db.Query("select id, nome from usuarios where id > ?", 0) //select parametrizado
 	defer stmt.Close()
 
+	var user usuario
+
 	for stmt.Next() {
-		var user usuario
 		stmt.Scan(&user.id, &user.nome)
 		fmt.Println(user)
 	}
